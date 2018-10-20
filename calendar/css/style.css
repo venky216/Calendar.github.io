@@ -1,0 +1,228 @@
+html {
+    font-size: 62.5%;
+    box-sizing: border-box;
+  }
+  
+  body {
+    box-sizing: border-box;
+    font-family: 'Lato', sans-serif;
+  }
+  
+  .flex {
+    display: flex;
+    flex-direction: row;
+  }
+  
+  .container {
+    margin: 200px auto;
+    max-width: 1200px;
+    box-shadow: rgba(0, 0, 0, 0.6) 0px 20px 50px 0px;
+    animation: swinging 2s;
+  }
+  
+  .left-side {
+    background: linear-gradient(135deg, #8d8dd4, #45ced4);
+    min-height: 450px;
+    min-width: 450px;
+    box-sizing: border-box;
+  }
+  
+  .left-side-content {
+    color: #fff;
+    margin: auto;
+    padding: 60px;
+    font-size: 2.3rem;
+    display: inline-block;
+    cursor: pointer;
+  }
+  
+  .tdn > div {
+    animation: moveInRight 1s;
+    font-size: 20rem;
+    padding: 40px;
+    text-shadow: 3px 4px rgb(29, 145, 145);
+  }
+  
+  .tdn {
+    margin-bottom: 6px;
+    font-size: 2.6rem;
+  }
+  
+  h4 {
+    font-size: 2rem;
+    padding: 5px 20px;
+    border-radius: 100px;
+    box-shadow: 1px 2px 6px rgba(20, 20, 20, 0.6);
+    display: inline;
+    background: #7182d8;
+  }
+  
+  p {
+    animation: moveInRight 1s;
+  }
+  
+  .right-side {
+    max-width: 100%;
+    font-size: 1.8rem;
+    padding: 50px 20px 20px 40px;
+    color: rgb(119, 60, 187);
+    box-sizing: border-box;
+    text-align: center;
+  }
+  
+  .card-header {
+    transform: translateX(-3px);
+  }
+  
+  .calendar-display {
+    max-width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
+    padding: 20px;
+  }
+  
+  .day {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    width: 14.28%;
+  }
+  
+  .daysInMonth {
+    display: flex;
+    flex-wrap: wrap;
+    box-sizing: border-box;
+    font-size: 1.5rem;
+    font-size: 1.8rem;
+  }
+  
+  .daysInMonth > div {
+    display: flex;
+    width: 100%;
+    cursor: pointer;
+    animation: moveInRight 1s;
+  }
+  
+  .daysInMonth div > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    position: relative;
+    width: 14.28%;
+    padding: 10px;
+    position: relative;
+  } 
+  .color {
+    position: relative;
+  }
+  
+  .color::before {
+    content: "---";
+    color: #8d8dd4;
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    position: absolute;
+  }
+  
+  .colort {
+    position: relative;
+  }
+  
+  .colort::before {
+    background: rgba(255, 255, 255, 0.144);
+    content: "";
+    font-size: 1.9rem;
+    display: flex;
+    justify-content: center;
+    align-content: center;
+    align-items: center;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    position: absolute;
+    box-shadow: rgba(0,0,0,0.3) 0px 5px 5px;
+  }
+  
+  .buttons {
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .button {
+    background: linear-gradient(100deg, #8d8dd4, #45ced4);
+    padding: 5px 20px;
+    border-radius: 25px;
+    color: #fff;
+    box-shadow: rgb(57, 168, 228) 0px 0px 5px;
+    border-style: none;
+  }
+  
+  .button:hover {
+    cursor: pointer;
+    transition: all .5s;
+    transform: translateY(-3px);
+    outline: none;
+    border-style: none;
+  }
+  
+  .button:active {
+    transition: all .5s;
+    transform: translateY(3px);
+  }
+  
+  button::-moz-focus-inner {
+    border: 0;
+  }
+  
+  .button:active,
+  .button:focus {
+    border-style: none;
+    outline: none;
+  }
+  
+  @keyframes moveInLeft {
+    0% {
+      opacity: 0;
+      transform: translateX(-100px);
+    }
+  
+    100% {
+      opacity: 1;
+      transform: translate(0);
+    }
+  }
+  
+  @keyframes moveInRight {
+    0% {
+      opacity: 0;
+      transform: translate(100px);
+    }
+  
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  @keyframes swinging {
+    0% {
+      transform: rotate(0deg);
+      opacity: 0;
+    }
+  
+    35% {
+      transform: rotate(-5deg);
+    }
+  
+    70% {
+      transform: rotate(5deg);
+    }
+  
+    100% {
+      transform: rotate(0deg);
+    }
+  }
