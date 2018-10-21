@@ -4,6 +4,7 @@ let currentYear = currentDay.getFullYear();//It will gives you the current year 
 let currentDayName = currentDay.getDay();//It will gives you the current day
 let todayDate = currentDay.getDate();//It will gives you the current day which is static and we are using it for conditions
 let thisMonth = currentDay.getMonth();//It will gives you the current month which is static and we are using it for conditions
+let thisYear = currentDay.getFullYear();
 
 
 let months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"]
@@ -66,5 +67,11 @@ function next() {
     currentMonth = (currentMonth + 1) % 12;
     displayCalendar(currentMonth, currentYear);
     console.log("clicked");
+}
+//it will redirect to todays date
+function today(){
+    console.log(thisMonth)
+    displayCalendar(thisMonth,thisYear)
+    mny.innerHTML = months[thisMonth] + " " + thisYear;
 }
 displayCalendar(currentMonth, currentYear);
